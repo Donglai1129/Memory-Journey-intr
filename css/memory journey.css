@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spectral', serif;
+  background-color: #f9f6e5; 
+}
+
+.time-library-section {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr; 
+  align-items: center;
+  justify-items: center;
+  height: 100vh; 
+  color: black;
+}
+
+.left-column, .right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.left-column h1 {
+  font-size: 3.5rem;
+  font-weight: 700;  
+  margin: 0;
+}
+
+.right-column p {
+  font-size: 2.5rem;
+  font-weight: 400; 
+  line-height: 1.2;
+  margin: 0;
+}
+
+.time-library-section > div:nth-child(2) {
+  background-color: black;
+  height: 80%; 
+  width: 1px;
+}
+
+.memory-journey {
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px; 
+}
+
+.memory-journey a {
+  text-decoration: none;
+}
+
+.memory-journey button {
+  background-color: black;
+  color: white;
+  font-family: 'Spectral', serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.memory-journey button:hover {
+  background-color: #444; 
+}
