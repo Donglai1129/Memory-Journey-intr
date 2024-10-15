@@ -33,7 +33,7 @@ html, body {
 .vertical-line {
   background-color: black;
   width: 1px;
-  height: 80%; 
+  height: 100%; 
   margin: auto; 
 }
 
