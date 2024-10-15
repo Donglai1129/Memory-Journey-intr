@@ -26,7 +26,7 @@ html, body {
 
 .left-column h1 {
   font-size: 3.5rem;
-  font-weight: 700;  
+  font-weight: 400;  
   margin: 0;
 }
 
@@ -59,8 +59,8 @@ html, body {
   background-color: black;
   color: white;
   font-family: 'Spectral', serif;
-  font-size: 1.2rem;
-  padding: 10px 20px;
+  font-size: 2.7rem;
+  padding: 10px 100px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;

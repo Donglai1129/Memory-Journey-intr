@@ -58,6 +58,9 @@ html, body {
   
   .footer-section h2 {
     margin: 0;
-    font-size: 1.5rem;
-    padding: 20px;
+    font-size: 3.5rem;
+    padding: 10px;
+    letter-spacing: 0.27em; 
+    font-weight: 400;
   }
+  

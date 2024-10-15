@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spectral', serif;
+  background-color: #f9f6e5; 
+}
+
+.entry-video-section {
+  display: grid;
+  grid-template-columns: 2fr 2fr 0.5fr;
+  height: 100vh;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-button a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.video-container {
+  grid-column: span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  background-color: #d3d3d3; 
+}
+
+.personal-space-bar {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-lr; 
+  text-orientation: upright;
+  height: 100vh; 
+}
+
+.personal-space-bar h2 {
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+}

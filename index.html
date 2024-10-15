@@ -5,22 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Journey</title>
   <link rel="stylesheet" href="css/memory-journey.css">
+  <style>
+  
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
   <main class="time-library-section">
     <div class="left-column">
       <h1>Time Library</h1>
     </div>
-    <div></div> <!-- The black line in the middle -->
+    <div></div> 
     <div class="right-column">
       <p>Time<br>Moves Fast<br>It's Easy To Miss<br>Small Beautiful<br>Moments.</p>
     </div>
+    
+ 
     <div class="memory-journey">
-      <!-- A simple clickable link to Entry-1.html -->
-      <a href="entries/enrey-1.html">
-        <button>Memory Journey</button>
-      </a>
+    
+      <button id="memory-journey-btn">Memory Journey</button>
     </div>
   </main>
+
+
+  <script>
+    document.getElementById('memory-journey-btn').addEventListener('click', function() {
+    
+      setTimeout(function() {
+        window.location.href = 'entries/enrey-1.html';  
+      }, 500); 
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spectral', serif;
+  background-color: #f9f6e5;
+}
+
+.entry-layout {
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr; 
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+  align-items: center;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-button a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.video-container {
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.text-container {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  padding-left: -100px; 
+}
+
+.text-container p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.text-container .date {
+  align-self: flex-end;
+  font-size: 1rem;
+}
+
+.next-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 200px; 
+  height: 200px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #888;
+}
+
+.next-button a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
