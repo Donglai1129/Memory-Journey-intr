@@ -62,3 +62,28 @@ html, body {
   margin: 0;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .entry-video-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+  }
+
+  .video-container video,
+  .video-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .personal-space-bar {
+    height: auto;
+    writing-mode: horizontal-tb;
+    text-align: center;
+  }
+
+  .upload-box {
+    padding: 50px 100px;
+    font-size: 2rem;
+  }
+}
