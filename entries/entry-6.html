@@ -34,11 +34,15 @@
 </head>
 <body>
   <main>
-    <a href="enrey-1.html" class="back-button">&larr;</a> 
+    <a href="enrey-1.html" class="back-button">&larr;</a>
     <div class="upload-container">
-      <div class="upload-box">
-        UPLOAD
-      </div>
+      <form id="uploadForm" action="submit.html" method="GET">
+        <label class="upload-box">
+          UPLOAD
+          <input type="file" name="file" style="display: none;" required>
+        </label>
+        <button type="submit" style="margin-top: 20px;">Submit</button>
+      </form>
     </div>
   </main>
 </body>
