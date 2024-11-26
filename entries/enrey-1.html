@@ -52,3 +52,58 @@
   </main>
 </body>
 </html>
+
+<script>
+  const links = document.querySelectorAll("a");
+
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const href = event.target.closest("a").getAttribute("href");
+      const swipeDirection = getSwipeDirection(href);
+
+      const swipeContainer = document.createElement("div");
+      swipeContainer.style.position = "fixed";
+      swipeContainer.style.top = "0";
+      swipeContainer.style.left = "0";
+      swipeContainer.style.width = "100%";
+      swipeContainer.style.height = "100%";
+      swipeContainer.style.backgroundColor = "#f9f6e5";
+      swipeContainer.style.transition = "transform 0.8s ease";
+      swipeContainer.style.zIndex = "1000";
+      document.body.appendChild(swipeContainer);
+
+      switch (swipeDirection) {
+        case "right":
+          swipeContainer.style.transform = "translateX(-100%)";
+          setTimeout(() => (swipeContainer.style.transform = "translateX(0)"), 10);
+          break;
+        case "left":
+          swipeContainer.style.transform = "translateX(100%)";
+          setTimeout(() => (swipeContainer.style.transform = "translateX(0)"), 10);
+          break;
+        case "up":
+          swipeContainer.style.transform = "translateY(100%)";
+          setTimeout(() => (swipeContainer.style.transform = "translateY(0)"), 10);
+          break;
+        default:
+          break;
+      }
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 800);
+    });
+  });
+
+  function getSwipeDirection(href) {
+    if (href.includes("entry-5.html")) {
+      return "right";
+    } else if (href.includes("entry-6.html")) {
+      return "left";
+    } else if (href.includes("entry-2.html")) {
+      return "up";
+    }
+    return "";
+  }
+</script>

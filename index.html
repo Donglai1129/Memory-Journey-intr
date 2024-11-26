@@ -6,9 +6,24 @@
   <title>Memory Journey</title>
   <link rel="stylesheet" href="css/memory-journey.css">
   <style>
-  
-    html {
-      scroll-behavior: smooth;
+    body {
+      overflow: hidden;
+    }
+
+    .swipe-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f9f6e5;
+      z-index: 9999;
+      transform: translateY(-100%);
+      transition: transform 0.7s ease;
+    }
+
+    .swipe-container.active {
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -17,25 +32,28 @@
     <div class="left-column">
       <h1>Time Library</h1>
     </div>
-    <div></div> 
+    <div></div>
     <div class="right-column">
       <p>Time<br>Moves Fast<br>It's Easy To Miss<br>Small Beautiful<br>Moments.</p>
     </div>
-    
- 
     <div class="memory-journey">
-    
-      <button id="memory-journey-btn">Memory Journey</button>
+
+      <button id="memoryJourneyBtn">Memory Journey</button>
     </div>
   </main>
-
-
   <script>
-    document.getElementById('memory-journey-btn').addEventListener('click', function() {
-    
-      setTimeout(function() {
-        window.location.href = 'entries/enrey-1.html';  
-      }, 500); 
+    document.getElementById('memoryJourneyBtn').addEventListener('click', function () {
+      const swipeContainer = document.createElement('div');
+      swipeContainer.className = 'swipe-container';
+      document.body.appendChild(swipeContainer);
+
+      setTimeout(() => {
+        swipeContainer.classList.add('active');
+      }, 10);
+
+      setTimeout(() => {
+        window.location.href = "entries/enrey-1.html";
+      }, 700);
     });
   </script>
 </body>

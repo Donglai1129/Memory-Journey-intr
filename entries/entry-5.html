@@ -36,5 +36,54 @@
     </div>
 
   </main>
+  <script>
+
+    const pages = [
+      "entry-5.html",
+      "entry-7.html",
+      "discover1.html",
+      "discover2.html",
+      "discover3.html"
+    ];
+  
+
+    let remainingPages = [...pages];
+  
+    function getNextRandomPage() {
+      if (remainingPages.length === 0) {
+
+        remainingPages = [...pages];
+      }
+
+      const randomIndex = Math.floor(Math.random() * remainingPages.length);
+      const nextPage = remainingPages[randomIndex];
+  
+
+      remainingPages.splice(randomIndex, 1);
+  
+      return nextPage;
+    }
+  
+
+    const discoverButton = document.querySelector(".left-section a");
+    if (discoverButton) {
+      discoverButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const randomPage = getNextRandomPage();
+        window.location.href = randomPage;
+      });
+    }
+  
+
+    const nextButton = document.querySelector(".next-button a");
+    if (nextButton) {
+      nextButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const randomPage = getNextRandomPage();
+        window.location.href = randomPage;
+      });
+    }
+  </script>
+  
 </body>
 </html>
